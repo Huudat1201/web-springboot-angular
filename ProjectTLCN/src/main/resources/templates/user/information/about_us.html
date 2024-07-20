@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{/user/layout/_form :: dynamic(
+            ~{::main},
+            ~{::#aside},
+            ~{::#material},
+            ~{::#breadcums}
+            )}">
+
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+</head>
+
+<body>
+	<th:block id="breadcums">
+		<ul class="breadcrumb">
+			<li><a th:href="@{/index}">Trang chủ</a></li>
+			<li><a th:href="@{/aboutUs}">Về chúng tôi</a></li>
+		</ul>
+	</th:block>
+
+	<th:block id="aside">
+
+		<div th:replace="/user/home/special_product.html"></div>
+
+	</th:block>
+
+	<main>
+		<div id="content" class="col-sm-9">
+			<h1>Giới Thiệu</h1>
+			<div class="about-us clearfix shop-content">
+				<div class="col-sm-12">
+					<div class="cms-block">
+						<h4>Chào mừng đến với DATHAU STORE!</h4>
+						<p>
+							<strong>DATHAU STORE - Nơi Đam Mê Công Nghệ Đồng Hành Cùng Bạn</strong>
+							<br>
+							Chào mừng bạn đến với DATHAU STORE, điểm đến lý tưởng cho những người đam mê công nghệ và
+							đang tìm kiếm những trải nghiệm đẳng cấp cùng sự đa dạng và chất lượng hàng đầu. Chúng tôi
+							tự hào mang đến cho khách hàng không chỉ là những chiếc điện thoại thông minh hàng đầu trên
+							thị trường, mà còn là một trải nghiệm mua sắm tuyệt vời và dịch vụ chăm sóc khách hàng đẳng
+							cấp.
+							<br>
+							<strong>Sự Đa Dạng Về Sản Phẩm:</strong>
+							Tại DATHAU STORE, chúng tôi hiểu rằng sự đa dạng là chìa khóa để đáp ứng mọi nhu cầu và sở
+							thích của khách hàng. Với một kho sản phẩm rộng lớn, từ những chiếc điện thoại thông minh
+							hàng đầu cho đến các phụ kiện và thiết bị công nghệ khác, chúng tôi cam kết mang đến cho bạn
+							nhiều lựa chọn để bạn có thể tìm thấy sản phẩm hoàn hảo cho mình. Bạn sẽ được khám phá những
+							công nghệ mới nhất và những thương hiệu uy tín trên thị trường.
+							<br>
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-12">
+					<img title="cms-img" th:src="@{/assets/images/banner/list.jpg}"
+						alt="cms-img" class="img-responsive">
+				</div>
+				<div class="col-sm-12">
+					<div class="cms-block">
+						<p>
+							<strong>Chất Lượng và Uy Tín:</strong>
+							Với phương châm "chất lượng là uy tín," chúng tôi không chỉ cung cấp những sản phẩm hàng đầu
+							với hiệu suất đỉnh cao mà còn đảm bảo rằng mọi sản phẩm đều đạt đúng tiêu chuẩn chất lượng
+							cao nhất. Sự uy tín của chúng tôi không chỉ là về sản phẩm mà còn là về dịch vụ chăm sóc
+							khách hàng và trải nghiệm mua sắm, tạo nên sự tin tưởng vững chắc từ phía khách hàng.
+							<br>
+							<strong>Trải Nghiệm Mua Sắm Tuyệt Vời:</strong>
+							DATHAU STORE không chỉ là nơi mua sắm, mà còn là không gian để bạn khám phá và trải nghiệm
+							công nghệ mới. Nhân viên chuyên nghiệp và nhiệt tình của chúng tôi sẽ hỗ trợ bạn trong quá
+							trình mua sắm, giúp bạn hiểu rõ hơn về sản phẩm và chọn lựa những thiết bị phù hợp nhất với
+							nhu cầu của bạn.
+							<br>
+							<strong>Dịch Vụ Chăm Sóc Khách Hàng Xuất Sắc:</strong>
+							Sự hài lòng của khách hàng là ưu tiên hàng đầu của chúng tôi. Chúng tôi cung cấp dịch vụ
+							chăm sóc khách hàng chuyên nghiệp và nhanh chóng, đảm bảo rằng mọi thắc mắc và yêu cầu của
+							bạn sẽ được giải quyết một cách tận tâm nhất.
+							<br>
+							DATHAU STORE tự hào là điểm đến cho những người yêu công nghệ, nơi bạn không chỉ mua sắm mà
+							còn khám phá và trải nghiệm. Hãy đồng hành cùng chúng tôi trên hành trình không ngừng đổi
+							mới và đem lại những trải nghiệm độc đáo nhất trong thế giới công nghệ!
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+</body>
+
+</html>

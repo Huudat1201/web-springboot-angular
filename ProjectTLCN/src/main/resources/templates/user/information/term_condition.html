@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{/user/layout/_form :: dynamic(
+            ~{::main},
+            ~{::#aside},
+            ~{::#material},
+            ~{::#breadcums}
+            )}">
+
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+</head>
+
+<body>
+	<th:block id="breadcums">
+		<ul class="breadcrumb">
+			<li><a th:href="@{/index}">Trang chủ</a></li>
+			<li><a th:href="@{/termCondition}">Điều Khoản & Quy Định</a></li>
+		</ul>
+	</th:block>
+
+	<th:block id="aside">
+	</th:block>
+
+	<main>
+		<div id="content" class="col-sm-9">
+			<h1>Thông tin</h1>
+			<div class="about-us clearfix shop-content">
+				<div class="col-sm-12">
+					<div class="cms-block">
+						<h4>Điều khoản sử dụng</h4>
+						<p>
+
+							Chào mừng quý khách đến mua sắm tại DATHAUSTORE! Sau khi truy cập trang web của chúng tôi để
+							tham khảo hoặc mua sắm, quý khách đã đồng ý tuân thủ và ràng buộc theo những quy định của
+							DATHAUSTORE. Xin vui lòng xem kỹ các quy định này và hợp tác cùng chúng tôi để xây dựng một
+							trang web DATHAUSTORE ngày càng thân thiện và đáp ứng tốt những yêu cầu của quý khách. Nếu
+							có bất kỳ câu hỏi nào về những điều khoản trên, quý khách vui lòng liên hệ với chúng tôi qua
+							địa chỉ email Huudat1201@gmail.com<br><br>
+
+							<strong>Tài khoản của khách hàng</strong> <br>
+
+							Khi sử dụng dịch vụ của DATHAUSTORE, quý khách sẽ cung cấp thông tin về địa chỉ email, mật
+							khẩu và họ tên để tạo một tài khoản. Việc sử dụng và bảo mật thông tin của tài khoản là
+							trách nhiệm và quyền lợi của quý khách khi sử dụng DATHAUSTORE. Thêm vào đó, những thông tin
+							khác trong tài khoản như tên tuổi, địa chỉ, và các chi tiết khác sẽ giúp DATHAUSTORE phục vụ
+							quý khách một cách tốt nhất.
+
+							Trong trường hợp thông tin do quý khách cung cấp không đầy đủ hoặc sai, dẫn đến khả năng
+							không thể giao hàng thành công, chúng tôi có quyền đình chỉ hoặc từ chối phục vụ và giao
+							hàng mà không chịu trách nhiệm đối với quý khách. Quý khách vui lòng cập nhật thông tin cá
+							nhân trong tài khoản DATHAUSTORE khi có bất kỳ thay đổi nào.
+
+							Để bảo vệ thông tin cá nhân, quý khách hãy giữ kín mật khẩu và tài khoản của mình. Quý khách
+							hoàn toàn chịu trách nhiệm đối với tất cả các hoạt động diễn ra thông qua việc sử dụng mật
+							khẩu hoặc tài khoản của mình. Chúng tôi khuyến khích quý khách thoát khỏi tài khoản
+							DATHAUSTORE sau mỗi lần sử dụng để đảm bảo an toàn thông tin cá nhân của mình. <br><br>
+
+							<strong>Quyền lợi bảo mật thông tin của khách hàng</strong> <br>
+
+
+							Khi quý khách sử dụng dịch vụ tại trang web DATHAUSTORE, chúng tôi cam kết rằng mọi thông
+							tin quý khách cung cấp sẽ chỉ được sử dụng nhằm mục đích nâng cao chất lượng dịch vụ dành
+							cho khách hàng của DATHAUSTORE. Chúng tôi cam đoan rằng thông tin này sẽ không bao giờ được
+							chuyển giao cho bên thứ ba nào khác với mục đích thương mại.
+
+							Tất cả thông tin của quý khách tại DATHAUSTORE sẽ được chúng tôi bảo mật chặt chẽ. Chúng tôi
+							cam kết duy trì sự an toàn và bảo mật của dữ liệu quý khách. Chỉ trong trường hợp có yêu cầu
+							của cơ quan pháp luật, chúng tôi sẽ chấp hành và cung cấp thông tin theo quy định của pháp
+							luật.
+
+							Chúng tôi coi trọng việc bảo vệ quyền riêng tư của quý khách và cam kết tuân thủ mọi quy
+							định về bảo vệ thông tin cá nhân. Nếu quý khách có bất kỳ câu hỏi hoặc lo ngại nào về việc
+							sử dụng thông tin cá nhân, vui lòng liên hệ với chúng tôi để chúng tôi có thể giúp đỡ và làm
+							rõ thêm. <br><br>
+						</p>
+					</div>
+				</div>
+				<!-- <div class="col-sm-6">
+          <img title="cms-img" src="https://opencart.mahardhi.com/MT05/ecart/02/image/catalog/about.jpg" alt="cms-img" class="img-responsive">
+        </div> -->
+			</div>
+		</div>
+		</div>
+		</div>
+
+
+
+	</main>
+
+	<script>
+		$(document).ready(function () {
+			var headerfixed = 0;
+			if (headerfixed == 1) {
+				$(window).scroll(function () {
+					if ($(window).width() > 991) {
+						if ($(this).scrollTop() > 150) {
+							$(".header-bottom").addClass("header-fixed");
+						} else {
+							$(".header-bottom").removeClass("header-fixed");
+						}
+					} else {
+						$(".header-bottom").removeClass("header-fixed");
+					}
+				});
+			} else {
+				$(".header-bottom").removeClass("header-fixed");
+			}
+		});
+	</script>
+</body>
+
+</html>
